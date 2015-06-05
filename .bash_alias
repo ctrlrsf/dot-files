@@ -2,5 +2,4 @@
 alias git=hub
 
 export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias ls="ls -GFh"
