@@ -21,3 +21,10 @@ set relativenumber
 ":nnoremap j jzz
 ":nnoremap k kzz
 :set so=999
+
+" highlight the background of any lines over 80 characters
+"
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkgrey ctermfg=white guibg=darkgrey
+  autocmd BufEnter * match OverLength /\%81v.*/
+augroup END
