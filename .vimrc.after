@@ -28,3 +28,6 @@ augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermbg=darkgrey ctermfg=white guibg=darkgrey
   autocmd BufEnter * match OverLength /\%81v.*/
 augroup END
+
+" set paste by default
+set paste
