@@ -1,3 +1,7 @@
+# Source git-prompt (installed by brew install git)
+. /usr/local/etc/bash_completion.d/git-prompt.sh
+
+#
 # Color codes:
 #
 # Cyan: \[$(tput setaf 6)\]
