@@ -22,12 +22,22 @@ set relativenumber
 ":nnoremap k kzz
 :set so=999
 
-" highlight the background of any lines over 80 characters
-"
-augroup vimrc_autocmds
-  autocmd BufEnter * highlight OverLength ctermbg=darkgrey ctermfg=white guibg=darkgrey
-  autocmd BufEnter * match OverLength /\%81v.*/
-augroup END
 
 " set paste by default
 set paste
+
+
+" highlight the background of any lines over 80 characters
+" https://wincent.com/blog/highlighting-overlength-lines-in-vim
+"
+hi LineProximity ctermbg=black guibg=#DDDDB6
+hi LineOverflow ctermbg=darkgrey guibg=#AAAAB6
+
+let w:m1=matchadd('LineProximity', '\%<81v.\%>75v', -1)
+let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
+
+autocmd VimEnter * autocmd WinEnter * let w:created=1
+autocmd VimEnter * let w:created=1
+
+autocmd WinEnter * if !exists('w:created') | let w:m1=matchadd('LineProximity', '\%<81v.\%>75v', -1) | endif
+autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
