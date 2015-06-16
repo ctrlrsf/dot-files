@@ -14,7 +14,10 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-" set relativenumber
+" Set both number and relativenumber
+" When number is also set with relativenumber, current line shows actual line
+" number instead of 0.
+set number
 set relativenumber
 
 " Vertically center cursor after moving up or down
