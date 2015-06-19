@@ -18,3 +18,7 @@ shopt -s cdspell
 for option in autocd globstar; do
   shopt -s "$option" 2> /dev/null
 done
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
