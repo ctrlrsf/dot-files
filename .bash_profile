@@ -21,4 +21,8 @@ done
 
 # NVM
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+
+# Use brew prefix to source nvm
+if [[ -n $(type -p brew) ]]; then
+  source $(brew --prefix nvm)/nvm.sh
+fi

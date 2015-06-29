@@ -1,5 +1,10 @@
 # Source git-prompt (installed by brew install git)
-. /usr/local/etc/bash_completion.d/git-prompt.sh
+
+if [[ -e /usr/local/etc/bash_completion.d/git-prompt.sh ]]; then
+  . /usr/local/etc/bash_completion.d/git-prompt.sh
+elif [[ -e /etc/bash_completion.d/git-prompt ]]; then
+  . /etc/bash_completion.d/git-prompt
+fi
 
 #
 # Color codes:
