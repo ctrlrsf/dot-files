@@ -6,8 +6,18 @@ unset file
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
+# Avoid duplicate history entries
+export HISTCONTROL=ignoredups:erasedups
+
+# Increase size of history file
+HISTSIZE=5000
+HISTFILESIZE=$HISTSIZE
+
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
+
+# Save history after every command so we can see it in other sessions
+PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
