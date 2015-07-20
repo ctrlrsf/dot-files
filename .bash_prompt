@@ -1,5 +1,4 @@
 # Source git-prompt (installed by brew install git)
-
 if [[ -e /usr/local/etc/bash_completion.d/git-prompt.sh ]]; then
   source /usr/local/etc/bash_completion.d/git-prompt.sh
 elif [[ -e /etc/bash_completion.d/git-prompt ]]; then
