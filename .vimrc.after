@@ -25,17 +25,14 @@ set relativenumber
 ":nnoremap k kzz
 :set so=999
 
-
 " set paste by default
 set paste
 
 " Allow yank to OSX clipboard
 set clipboard=unnamed
 
-
 " highlight the background of any lines over 80 characters
 " https://wincent.com/blog/highlighting-overlength-lines-in-vim
-"
 hi LineProximity ctermbg=black guibg=#DDDDB6
 hi LineOverflow ctermbg=darkgrey guibg=#AAAAB6
 
