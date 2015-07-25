@@ -1,5 +1,5 @@
 set bg=dark
-set guifont=Monoid\ Retina:h15
+set guifont=Source\ Code\ Pro:h14
 
 "color oxeded
 colorscheme jellybeans
