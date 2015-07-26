@@ -3,9 +3,6 @@ for file in ~/.{bash_work,bash_prompt,bash_alias,exports}; do
 done
 unset file
 
-# Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob
-
 # Avoid duplicate history entries
 export HISTCONTROL=ignoredups:erasedups
 
