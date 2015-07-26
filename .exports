@@ -6,3 +6,7 @@ export GREP_OPTIONS="--color=auto";
 
 # Enable CLI colors for `ls` (OSX)
 export CLICOLOR=1
+
+# Set path for GOCODE
+export GOPATH=${HOME}/gocode
+export PATH=${PATH}:${GOPATH}/bin

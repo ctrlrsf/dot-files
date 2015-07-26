@@ -1,5 +1,4 @@
 # Source git-prompt (installed by brew install git)
-
 if [[ -e /usr/local/etc/bash_completion.d/git-prompt.sh ]]; then
   source /usr/local/etc/bash_completion.d/git-prompt.sh
 elif [[ -e /etc/bash_completion.d/git-prompt ]]; then
@@ -14,5 +13,4 @@ fi
 # Reset color: \[$(tput sgr0)\]
 #
 # Set tab/window name: \[\033]0;\u@\h: \w\007\]
-
 export PS1="\[\033]0;\u@\h: \w\007\]\[$(tput setaf 5)\]---\[$(tput sgr0)\] \u@\h(\[$(tput setaf 6)\]\w\[$(tput sgr0)\])\$(__git_ps1)\n\$ "
