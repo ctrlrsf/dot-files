@@ -13,9 +13,6 @@ HISTFILESIZE=$HISTSIZE
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
-# Save history after every command so we can see it in other sessions
-PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
-
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
