@@ -11,3 +11,10 @@ alias tmux-colors='for i in {0..255}; do printf "\x1b[38;5;${i}mcolour${i}\n"; d
 
 # Quickly open tmux
 alias t='/usr/local/bin/tmux new-session -A -s "main" -n "main"'
+
+# Easily move up a directory
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
