@@ -10,3 +10,8 @@ export CLICOLOR=1
 # Set path for GOCODE
 export GOPATH=${HOME}/gocode
 export PATH=${PATH}:${GOPATH}/bin
+
+# NVM
+if [ -d "~/.nvm" ]; then
+  export NVM_DIR=~/.nvm
+fi

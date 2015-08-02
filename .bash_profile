@@ -20,9 +20,6 @@ for option in autocd globstar; do
   shopt -s "$option" 2> /dev/null
 done
 
-# NVM
-export NVM_DIR=~/.nvm
-
 # Use brew prefix to source nvm
 if [[ -n $(type -p brew) ]]; then
   source $(brew --prefix nvm)/nvm.sh
