@@ -44,3 +44,14 @@ autocmd VimEnter * let w:created=1
 
 autocmd WinEnter * if !exists('w:created') | let w:m1=matchadd('LineProximity', '\%<81v.\%>75v', -1) | endif
 autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
+
+" Open a new tab instead of a new split-window
+set switchbuf=usetab,newtab
+nnoremap <F8> :sbnext<CR>
+nnoremap <S-F8> :sbprevious<CR>
+
+" Show list of buffers and prompt which number to switch to
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" Always show tab line
+set showtabline=2
