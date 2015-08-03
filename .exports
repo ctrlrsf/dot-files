@@ -15,3 +15,5 @@ export PATH=${PATH}:${GOPATH}/bin
 if [ -d "~/.nvm" ]; then
   export NVM_DIR=~/.nvm
 fi
+
+export PATH="~/Library/Python/2.7/bin:${PATH}"
