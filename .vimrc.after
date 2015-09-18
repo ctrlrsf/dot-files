@@ -29,6 +29,8 @@ set relativenumber
 set paste
 
 " Allow yank to OSX clipboard
+noremap x "_x
+noremap dd "_dd
 set clipboard=unnamed
 
 " highlight the background of any lines over 80 characters
@@ -55,3 +57,6 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Always show tab line
 set showtabline=2
+
+" Show tabs and end of line chars
+nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
