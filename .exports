@@ -16,4 +16,8 @@ if [ -d "~/.nvm" ]; then
   export NVM_DIR=~/.nvm
 fi
 
+# Add local python 2.7 bin
 export PATH="~/Library/Python/2.7/bin:${PATH}"
+
+# Add homebrew sbin
+export PATH="/usr/local/sbin:${PATH}"
