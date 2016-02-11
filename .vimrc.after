@@ -20,11 +20,6 @@ let g:go_highlight_build_constraints = 1
 set number
 set relativenumber
 
-" Vertically center cursor after moving up or down
-":nnoremap j jzz
-":nnoremap k kzz
-:set so=999
-
 " set paste by default
 set paste
 
