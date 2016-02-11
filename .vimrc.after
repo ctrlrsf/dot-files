@@ -59,3 +59,6 @@ nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 " Command-T - Add mappings here to overwrite Buffergator
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+
+" Map r to open NERDTree to buffer's directory
+map <leader>r :NERDTreeFind<cr>
