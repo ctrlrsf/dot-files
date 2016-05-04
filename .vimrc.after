@@ -56,9 +56,8 @@ set showtabline=2
 " Show tabs and end of line chars
 nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
-" Command-T - Add mappings here to overwrite Buffergator
-nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+" CtrlP
+nnoremap <silent> <Leader>c :CtrlP<CR>
 
 " Map r to open NERDTree to buffer's directory
 map <leader>r :NERDTreeFind<cr>
