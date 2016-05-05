@@ -60,6 +60,7 @@ nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 nnoremap <silent> <Leader>f :CtrlP<CR>
 nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 nnoremap <silent> <leader>m :CtrlPMRUFiles<CR>
+nnoremap <silent> <leader>k :CtrlPBookmarkDir<CR>
 
 " Map r to open NERDTree to buffer's directory
 map <leader>r :NERDTreeFind<cr>
