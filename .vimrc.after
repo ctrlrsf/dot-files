@@ -30,8 +30,8 @@ set clipboard=unnamed
 
 " highlight the background of any lines over 80 characters
 " https://wincent.com/blog/highlighting-overlength-lines-in-vim
-hi LineProximity ctermbg=black guibg=#DDDDB6
-hi LineOverflow ctermbg=darkgrey guibg=#AAAAB6
+hi LineProximity ctermbg=darkgrey guibg=#666666
+hi LineOverflow ctermbg=grey guibg=#999999
 
 let w:m1=matchadd('LineProximity', '\%<81v.\%>75v', -1)
 let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
