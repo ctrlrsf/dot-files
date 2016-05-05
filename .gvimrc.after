@@ -1,8 +1,4 @@
-set bg=dark
 set guifont=Menlo:h14
-
-"color oxeded
-colorscheme jellybeans
 
 " Disable right scrollbars
 set guioptions+=lr
