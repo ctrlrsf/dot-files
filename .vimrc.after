@@ -22,9 +22,6 @@ let g:go_highlight_build_constraints = 1
 set number
 set relativenumber
 
-" set paste by default
-set paste
-
 " Allow yank to OSX clipboard
 noremap x "_x
 noremap dd "_dd
