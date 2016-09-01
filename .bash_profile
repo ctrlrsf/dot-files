@@ -40,3 +40,6 @@ export GO15VENDOREXPERIMENT=1
 
 # Autocompletion helpers
 complete -C aws_completer aws
+
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
