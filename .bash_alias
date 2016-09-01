@@ -1,5 +1,6 @@
-# Make sure vi uses vim, which should be latest from brew
-alias vi=vim
+# Use neovim
+alias vi=nvim
+alias vim=nvim
 
 # Use hub for better github integration
 [[ -n $(command -v hub) ]] && alias git=hub
