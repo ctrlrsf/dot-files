@@ -27,6 +27,8 @@ for option in autocd globstar; do
 done
 
 # Use brew prefix to source nvm
+export NVM_DIR=~/.nvm
+mkdir -p "${NVM_DIR}"
 if [[ -n $(type -p brew) ]]; then
   source $(brew --prefix nvm)/nvm.sh
 fi
