@@ -1,7 +1,23 @@
 set bg=dark
-let g:molokai_original = 0
-let g:rehash256 = 1
-colorscheme molokai
+
+colorscheme solarized
+
+set wildmenu
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+set cursorline
+set colorcolumn=80
+set cursorcolumn
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+
+let g:go_metalinter_deadline = "10s"
 
 let g:syntastic_html_tidy_ignore_errors = ["proprietary attribute \"autofocus", "proprietary attribute \"ui-", "proprietary attribute \"ng-", "<form> proprietary attribute \"novalidate\"", "<form> lacks \"action\" attribute", "trimming empty <span>", "<input> proprietary attribute \"autofocus\"", "unescaped & which should be written as &amp;", "inserting implicit <span>", "<input> proprietary attribute \"required\"", "trimming empty <select>", "trimming empty <button>", "<img> lacks \"src\" attribute", "plain text isn't allowed in <head> elements", "<html> proprietary attribute \"app\"", "<link> escaping malformed URI reference", "</head> isn't allowed in <body> elements", "<script> escaping malformed URI reference", "discarding unexpected <body>", "'<' + '/' + letter not allowed here", "missing </script>", "proprietary attribute \"autocomplete\"", "trimming empty <i>", "proprietary attribute \"required\"", "proprietary attribute \"placeholder\"", "<ng-include> is not recognized!", "discarding unexpected <ng-include>", "missing </button>", "replacing unexpected button by </button>", "<ey-confirm> is not recognized!", "discarding unexpected <ey-confirm>", "discarding unexpected </ey-confirm>", "discarding unexpected </ng-include>"]
 
@@ -9,51 +25,29 @@ let g:syntastic_html_tidy_ignore_errors = ["proprietary attribute \"autofocus", 
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 
-" go-vim stuff
+" vim-go stuff
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-" Set both number and relativenumber
-" When number is also set with relativenumber, current line shows actual line
-" number instead of 0.
+" Show line numbers
 set number
-set relativenumber
+
+" Show matching braces
+set showmatch
 
 " Allow yank to OSX clipboard
 noremap x "_x
 noremap dd "_dd
 set clipboard=unnamed
 
-" highlight the background of any lines over 80 characters
-" https://wincent.com/blog/highlighting-overlength-lines-in-vim
-"hi LineProximity ctermbg=darkgrey guibg=#666666
-hi LineOverflow ctermbg=grey guibg=#999999
-
-"let w:m1=matchadd('LineProximity', '\%<81v.\%>75v', -1)
-let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
-
-autocmd VimEnter * autocmd WinEnter * let w:created=1
-autocmd VimEnter * let w:created=1
-
-"autocmd WinEnter * if !exists('w:created') | let w:m1=matchadd('LineProximity', '\%<81v.\%>75v', -1) | endif
-autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
-
-" Open a new tab instead of a new split-window
-set switchbuf=usetab,newtab
-nnoremap <F8> :sbnext<CR>
-nnoremap <S-F8> :sbprevious<CR>
-
 " Show list of buffers and prompt which number to switch to
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
-" Always show tab line
-set showtabline=2
-
 " Show tabs and end of line chars
-nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
 " CtrlP
 nnoremap <silent> <Leader>f :CtrlP<CR>
@@ -62,4 +56,12 @@ nnoremap <silent> <leader>m :CtrlPMRUFiles<CR>
 nnoremap <silent> <leader>k :CtrlPBookmarkDir<CR>
 
 " Map r to open NERDTree to buffer's directory
-map <leader>r :NERDTreeFind<cr>
+"map <leader>r :NERDTreeFind<cr>
+
+" Use netrw
+let g:netrw_liststyle=3
+let g:netrw_preview=1
+let g:netrw_winsize=25
+
+" Set ag as the ack search program
+let g:ackprg = 'ag --vimgrep'
