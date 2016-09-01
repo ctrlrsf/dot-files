@@ -43,3 +43,5 @@ complete -C aws_completer aws
 
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
+GPG_TTY=$(tty)
+export GPG_TTY
