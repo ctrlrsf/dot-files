@@ -1,1 +1,3 @@
 let mapleader = ","
+" Disable NERDTree while I try out using netrw instead
+call janus#disable_plugin('nerdtree')
