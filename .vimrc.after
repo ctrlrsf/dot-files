@@ -10,7 +10,6 @@ set statusline+=%*
 
 set cursorline
 set colorcolumn=80
-set cursorcolumn
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
