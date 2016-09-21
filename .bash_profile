@@ -27,11 +27,12 @@ for option in autocd globstar; do
 done
 
 # Use brew prefix to source nvm
-export NVM_DIR=~/.nvm
-mkdir -p "${NVM_DIR}"
-if [[ -n $(type -p brew) ]]; then
-  source $(brew --prefix nvm)/nvm.sh
-fi
+# commented out below because it's slow
+#export NVM_DIR=~/.nvm
+#mkdir -p "${NVM_DIR}"
+#if [[ -n $(type -p brew) ]]; then
+#  source $(brew --prefix nvm)/nvm.sh
+#fi
 
 export GOPATH=~/gocode
 export GO15VENDOREXPERIMENT=1
