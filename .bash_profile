@@ -46,3 +46,6 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# Temporary set this so tmux stops complaining on Sierra
+export EVENT_NOKQUEUE=1
