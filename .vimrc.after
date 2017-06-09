@@ -11,6 +11,8 @@ set statusline+=%*
 set cursorline
 set colorcolumn=80
 
+set wrap
+
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
@@ -45,9 +47,6 @@ set clipboard=unnamed
 " Show list of buffers and prompt which number to switch to
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
-" Show tabs and end of line chars
-nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-
 " CtrlP
 nnoremap <silent> <Leader>f :CtrlP<CR>
 nnoremap <silent> <leader>b :CtrlPBuffer<CR>
@@ -64,3 +63,6 @@ let g:netrw_winsize=25
 
 " Set ag as the ack search program
 let g:ackprg = 'ag --vimgrep'
+
+" Highlight leading tab and trailing spaces
+set listchars=tab:»\ ,extends:>,precedes:<,trail:·
