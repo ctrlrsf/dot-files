@@ -1,7 +1,5 @@
 set bg=dark
 
-colorscheme solarized
-
 set wildmenu
 
 set statusline+=%#warningmsg#
