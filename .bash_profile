@@ -49,3 +49,6 @@ export GPG_TTY
 
 # Temporary set this so tmux stops complaining on Sierra
 export EVENT_NOKQUEUE=1
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
