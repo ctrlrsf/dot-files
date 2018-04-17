@@ -9,7 +9,7 @@
 
 # If we have git-radar (OSX), use it
 if type -p git-radar > /dev/null; then
-  export PS1="\[\033]0;\u@\h: \w\007\]\[$(tput setaf 6)\][\w]\[$(tput sgr0)\]\$(git-radar --bash)\n\u@\h\$ "
+  export PS1="\[\033]0;\u@\h:\w\007\]\[$(tput setaf 6)\][\w]\[$(tput sgr0)\]\$(git-radar --bash)\n\u@\h\$ "
 else
-  export PS1="\[\033]0;\u@\h: \w\007\]\[$(tput setaf 6)\][\w]\[$(tput sgr0)\]\n\u@\h\$ "
+  export PS1="\[\033]0;\u@\h:\w\007\]\[$(tput setaf 6)\][\w]\[$(tput sgr0)\]\n\u@\h\$ "
 fi
